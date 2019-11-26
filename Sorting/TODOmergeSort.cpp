@@ -11,57 +11,53 @@ void show(vector<int> v) {
 	cout << endl;
 }
 
-vector<int> mergeSort(vector<int>& arr, int start, int center, int end) {
+void mergeSort(vector<int>& arr, int start, int center, int end) {
 	vector<int> ret;
+	int s = start, m = center + 1;
+	int k = 0;
 	cout << "\n\n\n";
 	show(arr);
-	while (true) {
-		cout << "start:" << start << "\t center+1:" << center + 1 << "\t end:" << end<< endl;
-		cout << arr[start] << " " << arr[center + 1] << endl;
-		
-		if (start == center && center + 1 == end) {
-			cout << "OUT" << endl;
-			break;
+	while (start <= center && m <= end) {
+		/*cout << "start:" << start << "\t m:" << m << "\t end:" << end << endl;
+		cout << arr[start] << " " << arr[m] << endl;*/
+		if (arr[start] < arr[m]) {
+			ret.push_back(arr[start++]);
 		}
-		
-		if (arr[start] < arr[center + 1]) {
-			ret.push_back(arr[start]);
-			cout << arr[start];
-			start++;
+		else if (arr[start] > arr[m]) {
+			ret.push_back(arr[m++]);
 		}
-		else if (arr[start] > arr[center + 1]) {
-			ret.push_back(arr[center + 1]);
-			cout << arr[center + 1];
-			center++;
-		}
-		
 	}
-	cout << "TEST";
-	return ret;
+	while (start <= center) {
+		ret.push_back(arr[start++]);
+		cout << arr[start] << endl;
+	}
+	while (m <= end) {
+		ret.push_back(arr[m++]);
+		cout << arr[m] << endl;
+	}
+
+	for (int t = s; t <= end; t++) {
+		arr[t] = ret[k++];
+	}
 }
 void merge(vector<int>& arr, int start, int end) {
-	vector<int> b;
 	if (start < end) {
 		int center = (start + end) / 2;
 		merge(arr, start, center);
 		merge(arr, center + 1, end);
-		b = mergeSort(arr, start, center, end);
-		show(b);
+		mergeSort(arr, start, center, end);
 	}
 }
-
-
 
 int main() {
 	srand(time(NULL));
 	vector<int> a;
 	for (int i = 0; i < 20; i++) {
-		a.push_back(rand() % 20);
+		a.push_back(20 - i);
 	}
 	cout << "Before" << endl;
 	show(a);
 	cout << "----------------" << endl;
-	merge(a, 0, 20);
+	merge(a, 0, 19);
 	show(a);
-	
 }

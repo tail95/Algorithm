@@ -6,4 +6,3 @@ def solution(s):
         else:
             stack.append(s[i])
     return False if stack else True
-    

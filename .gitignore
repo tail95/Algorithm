@@ -1,3 +1,10 @@
+#Test Files
+test.cpp
+test.py
+
+#input files
+inputs/
+
 #vscode
 .vscode/
 

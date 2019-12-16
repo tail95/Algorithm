@@ -5,8 +5,8 @@ test.py
 #input files
 inputs/
 
-#vscode
-.vscode/
+#pycache
+__pycache__/
 
 # Prerequisites
 *.d

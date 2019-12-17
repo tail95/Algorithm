@@ -12,5 +12,9 @@
     "workbench.colorCustomizations": {
         "terminalCursor.foreground": "#33f1b2d0"
      },
-     "terminal.integrated.cursorBlinking": true,    
+    "terminal.integrated.cursorBlinking": true,
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    
 }

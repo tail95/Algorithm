@@ -15,7 +15,8 @@
     "terminal.integrated.cursorBlinking": true,
     "files.associations": {
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iosfwd": "cpp"
     },
     
 }

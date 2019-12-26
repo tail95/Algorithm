@@ -3,7 +3,7 @@
 #include <queue>
 using namespace std;
 
-int n, targetA, targetB, m, x, y, current, nxt, answer = 0;
+int n, targetA, targetB, m, x, y, current, nxt, d[101];
 vector<vector<int>> v;
 bool visited[101];
 queue<int> q;
@@ -13,46 +13,28 @@ void bfs(int ta, int tb)
 {
     q.push(ta);
     visited[ta] = true;
-    fin = false;
     while (!q.empty())
     {
-        checker = false;
         current = q.front();
-
-        cout << "Current Node: " << current << "\tanswer: " << answer << endl;
         q.pop();
         for (int i = 0; i < v[current].size(); ++i)
         {
             nxt = v[current][i];
-            cout << i << endl;
-            // cout << " NEXT: " << nxt << endl;
             if (!visited[nxt])
             {
-                cout << " NEXT: " << nxt << endl;
                 q.push(nxt);
                 visited[nxt] = true;
-                checker = true;
-                if (nxt == tb)
-                {
-                    fin = true;
-                    break;
-                }
+                d[nxt] = d[current] + 1;
             }
         }
-        if (checker)
-            answer++;
-        if(fin)
-            break;
     }
-    if (fin)
-        cout << answer;
-    else
-        cout << -1;
+    cout << (d[tb] == 0 ? -1 : d[tb]) << endl;
 }
 int main()
 {
     cin >> n >> targetA >> targetB >> m;
-    v.resize(n + 1);
+    v.resize(n);
+
     while (m--)
     {
         cin >> x >> y;
@@ -61,3 +43,6 @@ int main()
     }
     bfs(targetA - 1, targetB - 1);
 }
+
+
+// dp처럼 각 점으로 부터의 거리를 하나씩 추가해줘야함

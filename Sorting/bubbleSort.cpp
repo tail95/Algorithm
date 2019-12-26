@@ -32,6 +32,6 @@ int main() {
 	for (int i = 0; i < 1000; i++) {
 		b.push_back(rand() % 1000);
 	}
-	bubblesort(b, 1000);
+	bubbleSort(b, 1000);
 	show(b, 1000);
 }

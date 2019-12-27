@@ -19,17 +19,17 @@ int solution(int n, vector<vector<int>> computers)
             answer++;
             q.push(j);
             visited[j] = true;
-            while (!q.empty())
+        }
+        while (!q.empty())
+        {
+            current = q.front();
+            q.pop();
+            for (int i = 0; i < computers[current].size(); ++i)
             {
-                current = q.front();
-                q.pop();
-                for (int i = 0; i < computers[current].size(); ++i)
+                if (!visited[i] && computers[current][i])
                 {
-                    if (!visited[i] && computers[current][i])
-                    {
-                        visited[i] = true;
-                        q.push(i);
-                    }
+                    visited[i] = true;
+                    q.push(i);
                 }
             }
         }
@@ -55,7 +55,7 @@ int solution(int n, vector<vector<int>> computers)
 //     v2[1].push_back(0);
 //     v2[1].push_back(2);
 //     v2[2].push_back(1);
-    
+
 //     // cout << solution(3, v) << endl;
 //     cout << solution(3, v2) << endl;
 // }

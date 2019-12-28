@@ -8,7 +8,7 @@
     ],
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
-    "python.testing.unittestEnabled": true,
+    "python.testing.unittestEnabled": false,
     "workbench.colorCustomizations": {
         "terminalCursor.foreground": "#33f1b2d0"
     },
@@ -19,4 +19,6 @@
         "iosfwd": "cpp"
     },
     "git.ignoreLimitWarning": true,
+    "editor.fontFamily": "'D2Coding ligature'",
+    "python.testing.promptToConfigure": false,
 }

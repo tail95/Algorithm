@@ -1,5 +1,5 @@
 import sys
-
+sys.setrecursionlimit(50000)
 def dfs(x, y, color, mapping):
     dx = [-1,0,1,0]
     dy = [0,-1,0,1]

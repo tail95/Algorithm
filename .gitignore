@@ -1,6 +1,7 @@
+*.class
+
 #Test Files
-test.cpp
-test.py
+test.*
 
 #input files
 inputs/

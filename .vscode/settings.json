@@ -21,6 +21,7 @@
     "git.ignoreLimitWarning": true,
     "editor.fontFamily": "'D2Coding ligature'",
     "python.testing.promptToConfigure": false,
+    "python.pythonPath": "C:\\Users\\BH\\Anaconda3\\envs\\voice\\python.exe",
     // "files.exclude": {
     //     "**/.classpath": true,
     //     "**/.project": true,

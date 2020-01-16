@@ -21,7 +21,7 @@
     "git.ignoreLimitWarning": true,
     "editor.fontFamily": "'D2Coding ligature'",
     "python.testing.promptToConfigure": false,
-    "python.pythonPath": "C:\\Users\\BH\\Anaconda3\\envs\\voice\\python.exe",
+    "python.pythonPath": "C:\\Users\\Tail\\Anaconda3\\python.exe",
     // "files.exclude": {
     //     "**/.classpath": true,
     //     "**/.project": true,
@@ -30,14 +30,14 @@
     //     "**.class": true,
     // },
     // "java.home": "C:\\Program Files\\Java\\jdk1.8.0_201",
-    // "code-runner.runInTerminal": true,
+    "code-runner.runInTerminal": true,
     // "java.errors.incompleteClasspath.severity": "ignore",
-    // "code-runner.executorMap": {
-    //     "java": "cd $dir && javac $fileName -encoding utf-8&& java $fileNameWithoutExt",
-    //     "c": "gcc -o $fileNameWithoutExt $fullFileName && $fileNameWithoutExt",
-    //     "cpp": "g++ -o $fileNameWithoutExt $fullFileName && $fileNameWithoutExt",
-    //     "python": "$pythonPath -u $fullFileName",
-    // },
+    "code-runner.executorMap": {
+        "java": "cd $dir && javac $fileName -encoding utf-8&& java $fileNameWithoutExt",
+        "c": "gcc -o $fileNameWithoutExt $fullFileName && $fileNameWithoutExt",
+        "cpp": "g++ -o $fileNameWithoutExt $fullFileName && $fileNameWithoutExt",
+        "python": "$pythonPath -u $fullFileName",
+    },
     // "explorer.confirmDelete": false,
     // "java.jdt.ls.vmargs": "-Dfile.encoding=utf-8 -noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication"
 }

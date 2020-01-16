@@ -6,6 +6,7 @@
         "-p",
         "*test.py"
     ],
+    "python.condaPath": "conda",
     "python.testing.pytestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.unittestEnabled": false,
@@ -16,19 +17,22 @@
     "files.associations": {
         "iostream": "cpp",
         "vector": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ostream": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "editor.fontFamily": "'D2Coding ligature'",
+    "editor.fontLigatures": true,
     "python.testing.promptToConfigure": false,
-    "python.pythonPath": "C:\\Users\\Tail\\Anaconda3\\python.exe",
-    // "files.exclude": {
-    //     "**/.classpath": true,
-    //     "**/.project": true,
-    //     "**/.settings": true,
-    //     "**/.factorypath": true,
-    //     "**.class": true,
-    // },
+    "python.pythonPath": "C:\\Users\\BH\\Anaconda3\\envs\\voice\\python.exe",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        "**/**.class": true,
+        "**/**.exe": true,
+    },
     // "java.home": "C:\\Program Files\\Java\\jdk1.8.0_201",
     "code-runner.runInTerminal": true,
     // "java.errors.incompleteClasspath.severity": "ignore",

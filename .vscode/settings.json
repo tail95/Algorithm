@@ -27,6 +27,7 @@
     "python.pythonPath": "C:\\Users\\Taeil\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
     // "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Anaconda3_64\\python.exe",
     // "python.pythonPath": "C:\\Users\\BH\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+   
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,

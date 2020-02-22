@@ -5,6 +5,7 @@ def matching(c):
         for j in range(5):
             if bingo[i][j] == c:
                 match[i][j] = True
+
 def check():
     count = 0
     for i in range(5):
@@ -19,16 +20,16 @@ def check():
             count += 1
         if c2:
             count += 1
+    c3 = True
+    c4 = True
     for i in range(5):
-        c1 = True
-        c2 = True
         if not match[i][i]:
-            c1 = False
+            c3 = False
         if not match[i][4-i]:
-            c2 = False
-    if c1:
+            c4 = False
+    if c3:
         count += 1
-    if c2:
+    if c4:
         count += 1
     return count
 
@@ -52,9 +53,8 @@ for i in range(5):
         matching(cal)
         answer = check()
         if answer >= 3:
-            
             flag = True
-            for m in match:
-                print(m)
+            # for m in match:
+            #     print(m)
             print((i)*5 + (j+1))
             break

@@ -2,14 +2,17 @@ class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         answer = dict()
         for st in strs:
+            k = answer.keys()
             tst = tuple(sorted(st))
-            answer[tst].append(st)
+            if tst in k:
+                answer[tst].append(st)
+            else:
+                answer[tst] = [st]
+        return list(answer.values())
 
-        ret = list(answer.values())
-        return ret
 
     def groupAnagrams(self, strs):
-        ans = collections.defaultdict(list)  # default dict 로 기본값이 list로 설정
+        ans = collections.defaultdict(list) # 기본값이 list인 defaultdict 생성
         for s in strs:
             ans[tuple(sorted(s))].append(s)
         return ans.values()
